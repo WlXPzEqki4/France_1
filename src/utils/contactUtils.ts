@@ -10,7 +10,7 @@ export const getContactsByCategory = (contacts: KeyContact[]) => {
 
   // Government contacts
   const governmentContacts = contacts.filter(contact => 
-    ["Ulf Kristersson", "Carl XVI Gustaf", "Maria Malmer Stenergard", "Benjamin Dousa"].includes(contact.name)
+    ["H.E. Jean-Noël Barrot", "H.E. Alexis Michel Kohler", "H.E. Sebastian Lecornu", "H.E. Rachida Dati",  "H.E. Eric Lombard"].includes(contact.name)
   );
   if (governmentContacts.length > 0) {
     groupedContacts["Government"] = governmentContacts;
@@ -81,12 +81,11 @@ export const getContactsByCategory = (contacts: KeyContact[]) => {
   
   // Business
   const businessContacts = contacts.filter(contact => 
-    ["Jacob Wallenberg", "Daniel Elk", "Sebastian Siemiatkowski", "Stefan Persson", 
-     "Magnus Olsson", "Marcus Wallenberg", "Börje Ekholm"].includes(contact.name)
+    ["The Rodin Museum (Musée Rodin)", "Cathédrale Notre-Dame de Paris"].includes(contact.name)
   );
   
   if (businessContacts.length > 0) {
-    groupedContacts["Business"] = businessContacts;
+    groupedContacts["Locations"] = businessContacts;
   }
   
   // Handle any remaining unassigned contacts

@@ -113,49 +113,109 @@ export const relationsSections: SectionData[] = [
     relationshipDimensions: [
       {
         name: "Diplomatic Relations",
-        value: 75,
-        description: "Overall strong with occasional tensions over specific issues"
+        value: 85,
+        description: "Strong strategic partnership with high-level exchanges and mutual support on critical security matters"
       },
       {
         name: "Parliamentary Cooperation",
-        value: 85,
-        description: "Active exchange between legislative bodies"
+        value: 80,
+        description: "Regular engagement between legislative bodies with strong institutional ties"
       },
       {
         name: "Cultural Understanding",
-        value: 65,
-        description: "Generally positive with some sensitivity areas"
+        value:95,
+        description: "Exceptional cultural bonds strengthened by Louvre Abu Dhabi and educational partnerships"
       },
       {
         name: "Conflict Mediation",
-        value: 70,
-        description: "Complementary approaches to regional stability"
+        value: 80,
+        description: "Aligned on regional stability goals with some nuanced differences in approach"
+      },
+      {
+        name: "Defense Cooperation",
+        value:90,
+        description: "Deep military collaboration with UAE hosting France's only Gulf military base and major arms deals like the Rafale fighter agreement"
+      },
+      {
+        name: "Economic Partnership",
+        value: 90,
+        description: "Robust trade relationship with substantial cross-investment and strategic energy agreements"
       }
     ],
+    // graphData: {
+    //   nodes: [
+    //     { id: "uae_mofa", label: "UAE Ministry of Foreign Affairs", group: "uae", size: 25 },
+    //     { id: "sweden_mofa", label: "Swedish Ministry for Foreign Affairs", group: "sweden", size: 25 },
+    //     { id: "uae_embassy", label: "UAE Embassy in Stockholm", group: "uae", size: 20 },
+    //     { id: "sweden_embassy", label: "Swedish Embassy in Abu Dhabi", group: "sweden", size: 20 },
+    //     { id: "un_forum", label: "United Nations", group: "neutral", size: 22 },
+    //     { id: "eu_council", label: "European Council", group: "sweden", size: 18 },
+    //     { id: "gcc", label: "Gulf Cooperation Council", group: "uae", size: 18 }
+    //   ],
+    //   links: [
+    //     { source: "uae_mofa", target: "sweden_mofa", value: 5 },
+    //     { source: "uae_mofa", target: "uae_embassy", value: 4 },
+    //     { source: "sweden_mofa", target: "sweden_embassy", value: 4 },
+    //     { source: "uae_embassy", target: "sweden_mofa", value: 3 },
+    //     { source: "sweden_embassy", target: "uae_mofa", value: 3 },
+    //     { source: "uae_mofa", target: "un_forum", value: 2 },
+    //     { source: "sweden_mofa", target: "un_forum", value: 2 },
+    //     { source: "sweden_mofa", target: "eu_council", value: 3 },
+    //     { source: "uae_mofa", target: "gcc", value: 3 },
+    //     { source: "un_forum", target: "eu_council", value: 1 },
+    //     { source: "un_forum", target: "gcc", value: 1 }
+    //   ]
+    // }
+
+
+
+
     graphData: {
       nodes: [
-        { id: "uae_mofa", label: "UAE Ministry of Foreign Affairs", group: "uae", size: 25 },
-        { id: "sweden_mofa", label: "Swedish Ministry for Foreign Affairs", group: "sweden", size: 25 },
-        { id: "uae_embassy", label: "UAE Embassy in Stockholm", group: "uae", size: 20 },
-        { id: "sweden_embassy", label: "Swedish Embassy in Abu Dhabi", group: "sweden", size: 20 },
-        { id: "un_forum", label: "United Nations", group: "neutral", size: 22 },
-        { id: "eu_council", label: "European Council", group: "sweden", size: 18 },
-        { id: "gcc", label: "Gulf Cooperation Council", group: "uae", size: 18 }
+        { id: "french_govt", label: "French Government", group: "france", size: 30 },
+        { id: "elysee", label: "Elysée Palace", group: "france", size: 28 },
+        { id: "french_foreign", label: "French Ministry for Europe and Foreign Affairs", group: "france", size: 26 },
+        { id: "french_defense", label: "French Ministry of Defense", group: "france", size: 25 },
+        { id: "uae_foreign", label: "UAE Ministry of Foreign Affairs", group: "uae", size: 28 },
+        { id: "uae_embassy_paris", label: "UAE Embassy in Paris", group: "uae", size: 22 },
+        { id: "french_embassy_ad", label: "French Embassy in Abu Dhabi", group: "france", size: 22 },
+        { id: "gcc", label: "Gulf Cooperation Council", group: "uae", size: 20 },
+        { id: "strategic_dialogue", label: "UAE-France Strategic Dialogue", group: "neutral", size: 24 },
+        { id: "business_council", label: "UAE-France Business Council", group: "neutral", size: 23 },
+        { id: "louvre_ad", label: "Louvre Abu Dhabi", group: "neutral", size: 20 },
+        { id: "military_base", label: "French Military Base in UAE", group: "france", size: 20 }
       ],
       links: [
-        { source: "uae_mofa", target: "sweden_mofa", value: 5 },
-        { source: "uae_mofa", target: "uae_embassy", value: 4 },
-        { source: "sweden_mofa", target: "sweden_embassy", value: 4 },
-        { source: "uae_embassy", target: "sweden_mofa", value: 3 },
-        { source: "sweden_embassy", target: "uae_mofa", value: 3 },
-        { source: "uae_mofa", target: "un_forum", value: 2 },
-        { source: "sweden_mofa", target: "un_forum", value: 2 },
-        { source: "sweden_mofa", target: "eu_council", value: 3 },
-        { source: "uae_mofa", target: "gcc", value: 3 },
-        { source: "un_forum", target: "eu_council", value: 1 },
-        { source: "un_forum", target: "gcc", value: 1 }
+        { source: "elysee", target: "uae_foreign", value: 5 },
+        { source: "french_foreign", target: "uae_foreign", value: 5 },
+        { source: "french_defense", target: "uae_foreign", value: 4 },
+        { source: "elysee", target: "french_foreign", value: 5 },
+        { source: "elysee", target: "french_defense", value: 5 },
+        { source: "strategic_dialogue", target: "french_foreign", value: 4 },
+        { source: "strategic_dialogue", target: "uae_foreign", value: 4 },
+        { source: "business_council", target: "french_govt", value: 4 },
+        { source: "business_council", target: "uae_foreign", value: 4 },
+        { source: "louvre_ad", target: "french_govt", value: 3 },
+        { source: "louvre_ad", target: "uae_foreign", value: 3 },
+        { source: "military_base", target: "french_defense", value: 5 },
+        { source: "military_base", target: "uae_foreign", value: 4 },
+        { source: "french_embassy_ad", target: "uae_foreign", value: 3 },
+        { source: "uae_embassy_paris", target: "french_foreign", value: 3 },
+        { source: "gcc", target: "french_foreign", value: 2 },
+        { source: "gcc", target: "uae_foreign", value: 4 }
       ]
     }
+
+
+
+
+
+
+
+
+
+
+
   },
   {
     id: "economic-trade",
@@ -235,49 +295,88 @@ export const relationsSections: SectionData[] = [
     relationshipDimensions: [
       {
         name: "Trade Volume",
-        value: 90,
-        description: "Sharp rise of over 40% in recent years"
-      },
-      {
-        name: "Swedish Business Presence",
         value: 85,
-        description: "Over 200 Swedish companies active in the UAE"
+        description: "Approximately €7.5 billion in annual bilateral non-oil trade"
       },
       {
-        name: "UAE Investment in Sweden",
-        value: 65,
-        description: "Growing investment in Swedish technology and innovation"
+        name: "French Business Presence",
+        value: 95,
+        description: "Over 600 French companies operating in the UAE, including major firms like TotalEnergies, Carrefour, Airbus"
+      },
+      {
+        name: "UAE Investment in France",
+        value: 90,
+        description: "Significant investments in real estate, technology, infrastructure, and the recent €30-50 billion AI data center commitment"
       },
       {
         name: "Joint Projects",
-        value: 80,
-        description: "Collaboration in infrastructure, technology, and sustainability"
+        value: 90,
+        description: "Strong collaboration in energy, defense, cultural institutions, and emerging technologies"
+      },
+      {
+        name: "Energy Partnership",
+        value: 90,
+        description: "Strategic cooperation in traditional and renewable energy, including ADNOC-TotalEnergies LNG deals and joint renewable initiatives"
       }
     ],
+    // graphData: {
+    //   nodes: [
+    //     { id: "uae_economy", label: "UAE Ministry of Economy", group: "uae", size: 25 },
+    //     { id: "sweden_trade", label: "Swedish Ministry of Trade", group: "sweden", size: 25 },
+    //     { id: "business_sweden", label: "Business Sweden", group: "sweden", size: 22 },
+    //     { id: "uae_chamber", label: "UAE Chambers of Commerce", group: "uae", size: 22 },
+    //     { id: "tech_sector", label: "Technology Sector", group: "neutral", size: 20 },
+    //     { id: "energy_sector", label: "Energy Sector", group: "neutral", size: 20 },
+    //     { id: "defense_sector", label: "Defense Sector", group: "neutral", size: 18 },
+    //     { id: "innovation_hub", label: "Innovation Hubs", group: "neutral", size: 15 }
+    //   ],
+    //   links: [
+    //     { source: "uae_economy", target: "sweden_trade", value: 5 },
+    //     { source: "business_sweden", target: "uae_chamber", value: 4 },
+    //     { source: "uae_economy", target: "tech_sector", value: 4 },
+    //     { source: "sweden_trade", target: "tech_sector", value: 4 },
+    //     { source: "uae_economy", target: "energy_sector", value: 3 },
+    //     { source: "sweden_trade", target: "energy_sector", value: 3 },
+    //     { source: "uae_economy", target: "defense_sector", value: 3 },
+    //     { source: "sweden_trade", target: "defense_sector", value: 3 },
+    //     { source: "business_sweden", target: "innovation_hub", value: 2 },
+    //     { source: "uae_chamber", target: "innovation_hub", value: 2 },
+    //     { source: "tech_sector", target: "innovation_hub", value: 2 },
+    //     { source: "energy_sector", target: "innovation_hub", value: 1 }
+    //   ]
+    // }
+
     graphData: {
       nodes: [
         { id: "uae_economy", label: "UAE Ministry of Economy", group: "uae", size: 25 },
-        { id: "sweden_trade", label: "Swedish Ministry of Trade", group: "sweden", size: 25 },
-        { id: "business_sweden", label: "Business Sweden", group: "sweden", size: 22 },
-        { id: "uae_chamber", label: "UAE Chambers of Commerce", group: "uae", size: 22 },
-        { id: "tech_sector", label: "Technology Sector", group: "neutral", size: 20 },
-        { id: "energy_sector", label: "Energy Sector", group: "neutral", size: 20 },
-        { id: "defense_sector", label: "Defense Sector", group: "neutral", size: 18 },
-        { id: "innovation_hub", label: "Innovation Hubs", group: "neutral", size: 15 }
+        { id: "france_economy", label: "French Ministry of Economy & Finance", group: "france", size: 25 },
+        { id: "totalenergies", label: "TotalEnergies", group: "france", size: 22 },
+        { id: "adnoc", label: "ADNOC", group: "uae", size: 22 },
+        { id: "luxury_sector", label: "Luxury Goods Sector", group: "france", size: 18 },
+        { id: "energy_sector", label: "Energy Sector", group: "neutral", size: 23 },
+        { id: "defense_sector", label: "Defense & Aerospace Sector", group: "neutral", size: 21 },
+        { id: "business_council", label: "UAE-France Business Council", group: "neutral", size: 20 },
+        { id: "french_companies", label: "600+ French Companies in UAE", group: "france", size: 24 },
+        { id: "uae_investment", label: "UAE Sovereign Wealth Funds", group: "uae", size: 23 },
+        { id: "tech_ai_sector", label: "Technology & AI Sector", group: "neutral", size: 22 }
       ],
       links: [
-        { source: "uae_economy", target: "sweden_trade", value: 5 },
-        { source: "business_sweden", target: "uae_chamber", value: 4 },
-        { source: "uae_economy", target: "tech_sector", value: 4 },
-        { source: "sweden_trade", target: "tech_sector", value: 4 },
-        { source: "uae_economy", target: "energy_sector", value: 3 },
-        { source: "sweden_trade", target: "energy_sector", value: 3 },
-        { source: "uae_economy", target: "defense_sector", value: 3 },
-        { source: "sweden_trade", target: "defense_sector", value: 3 },
-        { source: "business_sweden", target: "innovation_hub", value: 2 },
-        { source: "uae_chamber", target: "innovation_hub", value: 2 },
-        { source: "tech_sector", target: "innovation_hub", value: 2 },
-        { source: "energy_sector", target: "innovation_hub", value: 1 }
+        { source: "uae_economy", target: "france_economy", value: 5 },
+        { source: "totalenergies", target: "adnoc", value: 5 },
+        { source: "france_economy", target: "business_council", value: 4 },
+        { source: "uae_economy", target: "business_council", value: 4 },
+        { source: "uae_economy", target: "energy_sector", value: 5 },
+        { source: "france_economy", target: "energy_sector", value: 4 },
+        { source: "uae_economy", target: "defense_sector", value: 4 },
+        { source: "france_economy", target: "defense_sector", value: 5 },
+        { source: "french_companies", target: "uae_economy", value: 4 },
+        { source: "uae_investment", target: "tech_ai_sector", value: 5 },
+        { source: "france_economy", target: "tech_ai_sector", value: 4 },
+        { source: "french_companies", target: "luxury_sector", value: 3 },
+        { source: "energy_sector", target: "totalenergies", value: 5 },
+        { source: "energy_sector", target: "adnoc", value: 5 },
+        { source: "uae_investment", target: "france_economy", value: 4 },
+        { source: "business_council", target: "french_companies", value: 3 }
       ]
     }
   },
@@ -431,24 +530,24 @@ export const relationsSections: SectionData[] = [
     ],
     relationshipDimensions: [
       {
-        name: "Yemen Conflict Positions",
-        value: 30,
-        description: "Significant differences in approach and involvement"
+        name: "Syria Policy (2020-2023)",
+        value: 65,
+        description: "UAE normalizes ties with Syria while France maintains a conditional stance advocating for political reforms"
       },
       {
-        name: "Arms Export Policy",
-        value: 25,
-        description: "Swedish restrictions on defense sales to UAE"
+        name: "Ukraine Conflict Stance (2022-2024)",
+        value: 70,
+        description: "France firmly aligned with NATO/EU against Russia while UAE adopts a neutral mediating position"
       },
       {
-        name: "Human Rights Dialogue",
-        value: 40,
-        description: "Ongoing differences in perspective and priorities"
+        name: "Approach to Political Islam",
+        value: 60,
+        description: "UAE designates Muslim Brotherhood as terrorist organization while France takes a more nuanced, cautious position"
       },
       {
-        name: "Political Islam Approach",
-        value: 20,
-        description: "Fundamental differences in policy toward Islamist groups"
+        name: "Regional Competition in Africa",
+        value: 70,
+        description: "Growing UAE economic and political influence in regions traditionally dominated by France, particularly in West Africa"
       }
     ],
     tabs: [
@@ -618,60 +717,84 @@ export const relationsSections: SectionData[] = [
 
 
 
+    // graphData: {     
+    //   nodes: [
+    //     { id: "swedish_govt", label: "Swedish Government", group: "sweden", size: 30 },
+    //     { id: "sapo", label: "Swedish Security Service (SÄPO)", group: "sweden", size: 25 },
+    //     { id: "foi", label: "Swedish Defense Research Agency", group: "sweden", size: 22 },
+    //     { id: "ui", label: "Swedish Institute of International Affairs", group: "sweden", size: 20 },
+    //     { id: "academia", label: "Swedish Universities", group: "sweden", size: 20 },
+    //     { id: "mb_related", label: "MB-Related Organizations in Sweden", group: "neutral", size: 18 },
+    //     { id: "civil_society", label: "Civil Society Organizations", group: "neutral", size: 15 },
+    //     { id: "media", label: "Swedish Media", group: "sweden", size: 15 }
+    //   ],
+    //   links: [
+    //     { source: "swedish_govt", target: "sapo", value: 5 },
+    //     { source: "sapo", target: "mb_related", value: 4, dashed: true },
+    //     { source: "foi", target: "swedish_govt", value: 3 },
+    //     { source: "ui", target: "swedish_govt", value: 3 },
+    //     { source: "academia", target: "mb_related", value: 2, dashed: true },
+    //     { source: "media", target: "mb_related", value: 3, dashed: true },
+    //     { source: "civil_society", target: "mb_related", value: 2 },
+    //     { source: "academia", target: "foi", value: 2 },
+    //     { source: "academia", target: "ui", value: 2 },
+    //     { source: "swedish_govt", target: "mb_related", value: 3, dashed: true },
+    //     { source: "civil_society", target: "swedish_govt", value: 2 }
+    //   ]
+    // }
+
+
+
     graphData: {
       nodes: [
-        { id: "swedish_govt", label: "Swedish Government", group: "sweden", size: 30 },
-        { id: "sapo", label: "Swedish Security Service (SÄPO)", group: "sweden", size: 25 },
-        { id: "foi", label: "Swedish Defense Research Agency", group: "sweden", size: 22 },
-        { id: "ui", label: "Swedish Institute of International Affairs", group: "sweden", size: 20 },
-        { id: "academia", label: "Swedish Universities", group: "sweden", size: 20 },
-        { id: "mb_related", label: "MB-Related Organizations in Sweden", group: "neutral", size: 18 },
-        { id: "civil_society", label: "Civil Society Organizations", group: "neutral", size: 15 },
-        { id: "media", label: "Swedish Media", group: "sweden", size: 15 }
+        { id: "french_govt", label: "French Government", group: "france", size: 30 },
+        { id: "dgsi", label: "French Internal Security (DGSI)", group: "france", size: 25 },
+        { id: "french_senate", label: "French Senate", group: "france", size: 22 },
+        { id: "french_interior", label: "French Ministry of Interior", group: "france", size: 24 },
+        { id: "uae_govt", label: "UAE Government", group: "uae", size: 28 },
+        { id: "mb_orgs_france", label: "MB-Related Organizations in France", group: "neutral", size: 18 },
+        { id: "islamist_groups", label: "International Islamist Political Parties", group: "neutral", size: 20 },
+        { id: "french_civil_society", label: "French Civil Society Organizations", group: "france", size: 16 },
+        { id: "french_media", label: "French Media", group: "france", size: 16 },
+        { id: "libya_govt", label: "Libyan Government", group: "neutral", size: 18 }
       ],
       links: [
-        { source: "swedish_govt", target: "sapo", value: 5 },
-        { source: "sapo", target: "mb_related", value: 4, dashed: true },
-        { source: "foi", target: "swedish_govt", value: 3 },
-        { source: "ui", target: "swedish_govt", value: 3 },
-        { source: "academia", target: "mb_related", value: 2, dashed: true },
-        { source: "media", target: "mb_related", value: 3, dashed: true },
-        { source: "civil_society", target: "mb_related", value: 2 },
-        { source: "academia", target: "foi", value: 2 },
-        { source: "academia", target: "ui", value: 2 },
-        { source: "swedish_govt", target: "mb_related", value: 3, dashed: true },
-        { source: "civil_society", target: "swedish_govt", value: 2 }
+        { source: "french_govt", target: "dgsi", value: 5 },
+        { source: "dgsi", target: "mb_orgs_france", value: 4, dashed: true },
+        { source: "french_senate", target: "french_govt", value: 3 },
+        { source: "french_interior", target: "mb_orgs_france", value: 4, dashed: true },
+        { source: "uae_govt", target: "mb_orgs_france", value: 1, dashed: true },
+        { source: "french_media", target: "mb_orgs_france", value: 3, dashed: true },
+        { source: "french_civil_society", target: "mb_orgs_france", value: 3, dashed: true },
+        { source: "french_govt", target: "islamist_groups", value: 2, dashed: true },
+        { source: "uae_govt", target: "islamist_groups", value: 1, dashed: true },
+        { source: "french_govt", target: "uae_govt", value: 4 },
+        { source: "french_govt", target: "mb_orgs_france", value: 3, dashed: true },
+        { source: "french_civil_society", target: "french_govt", value: 2 },
+        { source: "uae_govt", target: "french_govt", value: 4, dashed: false },
+        { source: "french_govt", target: "libya_govt", value: 3 },
+        { source: "uae_govt", target: "libya_govt", value: 3 }
       ]
     }
+    
+
+
+
+
+
   },
   {
     id: "key-contacts",
-    title: "Individuals of Interest Across Media and Thematic Files",
+    title: "People and Places of Interest",
     content: [
       {
         type: "paragraph",
-        content: "For UAE delegations seeking to strengthen bilateral relations with Sweden, engaging with the following key stakeholders would be beneficial for advancing diplomatic, economic, and cultural ties."
+        content: "For UAE delegations seeking to strengthen bilateral relations with France, engagement with key governmental stakeholders and cultural institutions would be highly beneficial for advancing diplomatic, economic, defense, and cultural ties. The following profiles highlight influential French officials and notable cultural venues that offer valuable opportunities for enhancing UAE-France cooperation and showcasing the UAE's commitment to this strategic partnership."
       }
     ],
 
 
     tabs: [
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       {
         id: "government",
         label: "Government Officials",
@@ -682,39 +805,48 @@ export const relationsSections: SectionData[] = [
           },
           {
             type: "paragraph",
-            content: "These key government figures would be essential contacts for any high-level UAE delegation visiting Sweden."
+            content: "For UAE delegations seeking to strengthen bilateral relations with France, engaging with the following key stakeholders would be beneficial for advancing diplomatic, economic, and cultural ties."
           }
         ],        
         keyContacts: [
 
           {
-            name: "Ulf Kristersson",
-            title: "Prime Minister of Sweden",
-            description: "Prime Minister of Sweden and leader of the Moderate Party who formed a right-wing coalition government in 2022 after narrowly winning the parliamentary elections. His administration has focused on addressing crime, immigration reform, and energy security while navigating Sweden's NATO accession process and maintaining Sweden's commitment to international cooperation on climate and development issues.",
+            name: "H.E. Jean-Noël Barrot",
+            title: "Minister for Europe and Foreign Affairs",
+            description: "A centrist economist and diplomat, likely to engage positively with the UAE, emphasising strategic cooperation on tech, security, and regional stability.",
             influence: "high",
-            imageUrl: "/lovable-uploads/Picture_8.png"
+            imageUrl: "/lovable-uploads/Picture_16.png"
           },
           {
-            name: "Carl XVI Gustaf",
-            title: "King of Sweden",
-            description: "King of Sweden since 1973, serving as the country's head of state and representing Sweden in ceremonial functions while maintaining a politically neutral role in accordance with the constitution. Throughout his long reign, he has focused on environmental issues, technology, and entrepreneurship, often participating in state visits that strengthen Sweden's international relationships.",
+            name: "H.E. Alexis Michel Kohler",
+            title: "Secretary General to the President (Elysée Palace)",
+            description: "President Macron’s powerful aide who coordinates France-UAE relations pragmatically, balancing strategic partnership with subtle caution on UAE’s rising influence.",
             influence: "high",
-            imageUrl: "/lovable-uploads/Picture_9.png"
+            imageUrl: "/lovable-uploads/Picture_15.png"
           },
           {
-            name: "Maria Malmer Stenergard",
-            title: "Minister for Foreign Affairs of Sweden",
-            description: "As Sweden's Minister for Foreign Affairs, Malmer Stenergard comes to this position after previously serving as Minister for Migration in Sweden's government, where she implemented more restrictive immigration policies. Before entering national politics, she worked as a municipal politician in Skåne and has a background in law, experience she now applies to navigating Sweden's diplomatic relationships and foreign policy objectives.",
+            name: "H.E. Sebastian Lecornu",
+            title: "Minister of Defense",
+            description: "Strong advocate for deeper defence ties with the UAE, viewing Abu Dhabi as a strategic ally in offsetting France’s reduced military presence in Africa.",
             influence: "high",
-            imageUrl: "/lovable-uploads/Picture_11.png"
+            imageUrl: "/lovable-uploads/Picture_14.png"
           },
           {
-            name: "Benjamin Dousa",
-            title: "Minister for International Development Cooperation and Foreign Trade",
-            description: "Recently appointed as Sweden's Minister for International Development Cooperation and Foreign Trade, Dousa previously served as chairman of the Moderate Youth League (MUF), where he gained prominence as a young political leader. In his current ministerial role, he oversees Sweden's foreign aid programs and international trade relations, bringing his center-right political perspective to the country's economic diplomacy.",
+            name: "H.E. Rachida Dati",
+            title: "Minister of Culture",
+            description: "High-profile advocate for France-UAE cultural diplomacy, leveraging shared cultural projects to strengthen bilateral ties and avoid political tensions.",
             influence: "high",
-            imageUrl: "/lovable-uploads/Picture_10.png"
+            imageUrl: "/lovable-uploads/Picture_13.png"
+          },
+          {
+            name: "H.E. Eric Lombard",
+            title: "Minister of Economy, Finance and Industry",
+            description: "Pragmatic economist focused on collaborative economic ties with UAE, navigating competition carefully to protect French commercial interests in Africa.",
+            influence: "high",
+            imageUrl: "/lovable-uploads/Picture_12.png"
           }
+
+
         ],
       },
 
@@ -727,305 +859,45 @@ export const relationsSections: SectionData[] = [
 
 
 
+
+
+
+
+
+
+
+
+
+
+
       {
-        id: "thinktanks",
-        label: "Think Tanks",
+        id: "business",
+        label: "Places of Interest",
         content: [
           {
             type: "subheading",
-            content: "Major Think Tanks and Institutions"
-          },
-          {
-            type: "list",
-            content: "Important policy and research organizations:",
-            items: [
-              
-              "Swedish Institute of International Affairs (UI): UI is primarily funded by Sweden’s Ministry for Foreign Affairs and reputable Swedish foundations. It conducts independent analyses of Middle Eastern geopolitics, including Gulf regional dynamics significant to UAE interests. There are no documented ties to the Muslim Brotherhood; its engagement is solely analytical.",
-              "Stockholm International Peace Research Institute (SIPRI): SIPRI receives major funding from the Swedish government, complemented by international sources, supporting its globally recognised security and arms-control research. Its analysis of arms imports, including UAE’s defence procurement strategies, offers strategic insights relevant to UAE policymakers. There are no documented institutional or financial connections between SIPRI and the Muslim Brotherhood.",
-              "Swedish Defense Research Agency (FOI): FOI is directly funded and governed by the Swedish Ministry of Defence, providing strategic security assessments and technological research. Its analyses of Middle Eastern conflicts and emerging security threats are relevant for UAE’s strategic planning. FOI has no institutional, financial, or ideological links to the Muslim Brotherhood.",
-              "Institute for Security & Development Policy (ISDP): ISDP's primary funding sources include Sweden’s government and international partners in East Asia and Europe. Its analysis of Eurasian connectivity, including China’s Belt and Road Initiative, aligns closely with UAE’s strategic economic interests. There are no documented links to the Muslim Brotherhood; ISDP remains analytical and critical regarding Islamist groups.",
-              "Swedish Institute (SI): SI operates under full Swedish governmental oversight, with funding through state budgets for cultural diplomacy and international exchanges. Its Middle East-focused initiatives, such as the Swedish Dialogue Institute, directly foster UAE–Sweden exchanges in education, innovation, and leadership development. SI has no known institutional or financial affiliations with the Muslim Brotherhood."
-            ]
+            content: "Places of Interest"
           },
           {
             type: "paragraph",
-            content: "Engaging with these institutions would provide valuable insights into Swedish foreign policy perspectives and opportunities for dialogue on regional issues."
-          }
-        ]
-
-      },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      {
-        id: "individuals",
-        label: "Influential Individuals",
-
-
-        content: [
-
-        ],
-
-        
-        keyContacts: [
-
-        {
-          name: "Danica Kragić Jensfelt",
-          title: "Professor of Robotics at KTH Royal Institute of Technology",
-          description: "One of the world's leading experts in robotics and computer vision. She has been named among Sweden's most powerful women in industry and \"Swede of the Year\" for her scientific contributions, while serving as a member of the Royal Swedish Academy of Sciences.",
-          influence: "high",
-          imageUrl: "/lovable-uploads/22d8e4ad-99a2-4b4d-923d-db52a3fd7d2b.png"
-        },
-        {
-          name: "Antonia Ax:son Johnson",
-          title: "Former Chairman of Axel Johnson AB",
-          description: "Fourth-generation leader of Axel Johnson AB, a family company founded in 1873, where she served as chairman from 1982 until stepping down as CEO in 2015 while maintaining ownership and board presence. With a net worth of $10.2 billion as of April 2024, she remains one of Sweden's richest and most influential businesswomen, occasionally engaging with Gulf region investors over recent decades.",
-          influence: "high",
-          imageUrl: "/lovable-uploads/f768b986-b09f-4177-9aea-5d7d503d961e.png"
-        },
-        
-
-
-
-        {
-          name: "Anders Kiessling",
-          title: "Professor of Aquaculture at the Swedish University of Agricultural Sciences",
-          description: "Pioneered \"aqua-agro\" techniques to recycle nutrients between land agriculture and aquaculture. He led an SLU delegation to the UAE to explore research partnerships, exemplifying Sweden's academic approach to addressing global food security challenges through international collaboration.",
-          influence: "high",
-          imageUrl: "/lovable-uploads/c3b63bf0-b4ac-4e46-92c5-7b251407ddfc.png"
-        },
-        {
-          name: "Peter Värbrand",
-          title: "Deputy Vice-Chancellor for External Relations and Innovation at Linköping University",
-          description: "Has significantly advanced international academic partnerships. He played a key role in establishing a Memorandum of Understanding between Linköping University and the University of Sharjah in the UAE, focusing on joint research and technology exchange in fields including drone aviation systems and aerospace.",
-          influence: "high",
-          imageUrl: "/lovable-uploads/39c33f25-e22d-43d3-9cf9-63506736328a.png"
-        },
-        
-
-
-
-        {
-          name: "Fredrik Heintz",
-          title: "Professor at Linköping University & Chair of Swedish National AI Council",
-          description: "Leading AI researcher who shapes Sweden's AI strategy, particularly in AI ethics and autonomous systems. His focus on AI for social good aligns with UAE initiatives, though his work remains primarily centered on Sweden's AI landscape and education.",
-          influence: "high",
-          imageUrl: "/lovable-uploads/e88f8927-5a5e-4b32-aa0b-b04fa6705dad.png"
-        },
-        {
-          name: "Max Tegmark",
-          title: "Swedish-American Physicist & MIT Professor",
-          description: "Influential AI safety expert who co-founded the Future of Life Institute and authored the seminal book \"Life 3.0\" on artificial intelligence's future. While based primarily in the US, his Swedish roots enhance Sweden's credibility in AI ethics globally, with his principles on AI governance resonating with UAE efforts to develop AI ethical frameworks.",
-          influence: "high",
-          imageUrl: "/lovable-uploads/f8a3266d-76bb-484e-8675-b4c0c584f53b.png"
-        },
-        {
-          name: "Sara Mazur",
-          title: "Chair of the Wallenberg AI, Autonomous Systems and Software Program (WASP)",
-          description: "Former Ericsson R&D head who leads Sweden's largest research program on AI and autonomous systems. She coordinates hundreds of researchers keeping Sweden at the AI forefront, engaging internationally including emerging dialogues with UAE's AI Ministry on smart cities and healthcare applications.",
-          influence: "high",
-          imageUrl: "/lovable-uploads/80a6c79a-30a4-41e2-a757-3c8e946e40ce.png"
-        },
-        
-
-
-
-
-
-        {
-          name: "Laurent Leksell",
-          title: "Co-founder and Chairman of Elekta AB",
-          description: "Built on his father's Gamma Knife invention to create a leading medical technology enterprise for cancer and neurosurgery treatment. Under his leadership, Elekta has become a key partner for UAE healthcare providers in oncology, showcasing advanced radiotherapy solutions at Dubai's Arab Health conference and supporting the Emirates' healthcare advancement goals.",
-          influence: "high",
-          imageUrl: "/lovable-uploads/7e973896-4f8c-4594-8325-dca6fca727f1.png"
-        },
-        {
-          name: "Björn Zoëga",
-          title: "Distinguished orthopedic surgeon and former CEO of Karolinska University Hospital",
-          description: "Has played a significant role in exporting Swedish medical expertise to the Gulf region. Since 2016, he has worked with Sweden's GHP Healthcare to oversee specialized spine surgery departments in both Sweden and the UAE, exemplifying effective cross-border medical knowledge transfer.",
-          influence: "high",
-          imageUrl: "/lovable-uploads/d0860c34-58dc-4811-964b-e983de165b9c.png"
-        },
-
-
-
-
-
-  
-        {
-          name: "Anna Borg",
-          title: "President and CEO of Vattenfall",
-          description: "First woman to serve as President and CEO of Vattenfall, Sweden's largest state-owned energy company, where she leads major investments in renewable energy and the transition to fossil-free power. She has engaged with UAE entities like Masdar on renewable energy knowledge exchange and participated in the World Future Energy Summit in Abu Dhabi, offering expertise in offshore wind and grid integration relevant to Gulf energy planning.",
-          influence: "high",
-          imageUrl: "/lovable-uploads/11d49371-2ac2-4f4e-be90-026808e43a71.png"
-        },
-        {
-          name: "Anders Forslund",
-          title: "Co-founder and CEO of Heart Aerospace",
-          description: "Pioneering green aviation technology by developing a 30-seat hybrid-electric regional airliner scheduled for launch by 2028. He has presented at the Dubai Airshow's tech showcases and interacted with Masdar's mobility innovation teams, positioning his company for potential future partnerships with UAE airlines seeking to reduce their carbon footprint.",
-          influence: "high",
-          imageUrl: "/lovable-uploads/5cf19aab-7d37-4981-8e95-4e83b553c3aa.png"
-        },
-        {
-          name: "Lena Sundquist",
-          title: "CEO of Climeon",
-          description: "CEO of Climeon, a Swedish clean-tech company that converts waste heat into electricity, representing Sweden's innovative green industrialists. Climeon has piloted systems in UAE desalination plants to improve efficiency, while Sundquist and peers regularly participate in UAE sustainability events to share green technology solutions and expertise.",
-          influence: "medium",
-          imageUrl: "/lovable-uploads/c65c16e7-15b2-4bee-b538-7daa47914bd2.png"
-        },
-        {
-          name: "Greta Thunberg",
-          title: "Environmental Activist",
-          description: "Swedish environmental activist who sparked the global youth climate movement beginning with her school strikes at age 15, becoming Time's Person of the Year in 2019. While she has criticized oil-producing nations and become involved in pro-Palestinian activism, her global influence was acknowledged when the UAE extended an invitation to her for COP28 in 2023.",
-          influence: "high",
-          imageUrl: "/lovable-uploads/69aa02d8-2856-40de-8b8f-7c2257c8e37e.png"
-        },
-        
-
-
-
-
-
-
-        {
-          name: "Carin Jämtin",
-          title: "Director General of the Swedish International Development Cooperation Agency (SIDA)",
-          description: "Former government minister who leads Sweden's official aid agency in strategic philanthropy and development funding worldwide. She collaborates with UAE-based philanthropic organizations like Dubai Cares through international forums such as the Global Partnership for Education, leveraging Sweden's resources through partnerships to maximize impact in areas including education for children in crisis zones.",
-          influence: "high",
-          imageUrl: "/lovable-uploads/cf96487f-726a-4489-9660-3f23b5b5befa.png"
-        },
-        {
-          name: "Niklas Zennström",
-          title: "Co-founder of Skype and Tech Entrepreneur",
-          description: "Prominent Swedish tech entrepreneur who established Zennström Philanthropies with his wife to fund initiatives in climate change, environmental protection, and social entrepreneurship. His strategic global giving aligns with UAE philanthropic programs in sustainability, and he participates in international networks like the UN and World Economic Forum that include UAE stakeholders, exemplifying tech-driven philanthropy focused on cross-border solutions.",
-          influence: "high",
-          imageUrl: "/lovable-uploads/9c110fb3-7b9b-4eae-97af-e36589d45ca4.png"
-        },
-
-
-
-
-
-
-
-        
-        {
-          name: "Jacob Wallenberg",
-          title: "Vice Chairman of Investor AB (the Wallenberg Investment Holding)",
-          description: "Vice chairman of Investor AB and patriarch of Sweden's famed Wallenberg family who presides over a vast portfolio of Sweden's largest companies including ABB, Ericsson, and AstraZeneca. He has led business delegations to the Gulf and overseen Wallenberg-chaired companies like Saab AB which sells defense systems to the UAE, actively supporting stronger Sweden-UAE economic relationships.",
-          highlightedNote: "See link below for deep-dive report PDF:",
-
-          // description: "Vice chairman of Investor AB and patriarch of Sweden's famed Wallenberg family who presides over a vast portfolio of Sweden's largest companies including ABB, Ericsson, and AstraZeneca. He has led business delegations to the Gulf and overseen Wallenberg-chaired companies like Saab AB which sells defense systems to the UAE, actively supporting stronger Sweden-UAE economic relationships. See link below for deep-dive report PDF:",
-          influence: "high",
-          imageUrl: "/lovable-uploads/Picture_1.png",
-          pdfLink: "/pdfs/Wallenger.pdf"
-        },
-        {
-          name: "Daniel Elk",
-          title: "Co-Founder and CEO of Spotify",
-          description: "Co-founder and CEO of Spotify who transformed the global music industry, growing his Stockholm startup into a NYSE-listed giant with users in over 180 markets. He has participated in the UAE's World Government Summit and overseen Spotify's 2018 launch in the Middle East, where the service has gained popularity and developed regional partnerships.",
-          influence: "medium",
-          imageUrl: "/lovable-uploads/Picture_2.png"
-        },
-        {
-          name: "Sebastian Siemiatkowski",
-          title: "CEO and Co-Founder of Klarna",
-          description: "CEO and co-founder of Klarna, the Stockholm-based fintech unicorn valued at billions of dollars that pioneered 'buy-now-pay-later' payment solutions. While Klarna has no direct UAE operations, Siemiatkowski's success has attracted interest from Middle Eastern investors and banks, and he has appeared at fintech events with Gulf participants.",
-          influence: "medium",
-          imageUrl: "/lovable-uploads/Picture_3.png"
-        },
-        {
-          name: "Stefan Persson",
-          title: "Long-time Chairman and Chairman Emeritus of H&M Group ",
-          description: "Long-time chairman (now chairman emeritus) of H&M Group who expanded the family business into a worldwide fast-fashion empire. Under his leadership, H&M established dozens of stores across the UAE through regional franchise partners and developed partnerships with Emirati mall operators.",
-          influence: "low",
-          imageUrl: "/lovable-uploads/Picture_4.png"
-        },
-        
-        {
-          name: "Magnus Olsson",
-          title: "Co-Founder of Careem",
-          description: "Swedish co-founder of Careem, the UAE-based ride-hailing company acquired by Uber for $3.1 billion in 2019. He continues to be based partly in Dubai, mentoring startups at Abu Dhabi's Hub71 tech hub and serving as a prime example of Swedish entrepreneurial success in the Gulf region.",
-          influence: "high",
-          imageUrl: "/lovable-uploads/Picture_5.png"
-        },
-        {
-          name: "Marcus Wallenberg",
-          title: "Chairman of Saab, frequent interlocutor with UAE senior leaders ",
-          description: "Chairman of Saab and brother of Jacob Wallenberg who serves on the boards of several Wallenberg companies while frequently engaging with UAE leadership on defense and economic cooperation. His influence extends through major Swedish corporations with significant interests in the Middle East.",
-          influence: "high",
-          imageUrl: "/lovable-uploads/Picture_6.png"
-        },
-        {
-          name: "Börje Ekholm",
-          title: "CEO of Ericsson",
-          description: "CEO of Ericsson and member of Sweden's AI Commission who leads one of the country's most globally significant technology companies. He has developed important relationships with UAE telecom partners as Ericsson expands its presence in the Middle East telecommunications market.",
-          influence: "medium",
-          imageUrl: "/lovable-uploads/Picture_7.png"
-        },      
-      ]
-
-      },
-
-
-
-      {
-        id: "media",
-        label: "Media",
-        content: [
-          {
-            type: "subheading",
-            content: "Media"
-          },
-          {
-            type: "paragraph",
-            content: "Sweden's media landscape is shaped by influential figures who lead major news organisations, set journalistic standards, and connect Swedish audiences to both domestic and global affairs. These leaders drive innovation in public service broadcasting and print journalism while maintaining Sweden's proud tradition of independent, trustworthy media."
+            content: "The following cultural institutions represent significant opportunities for enhancing UAE-France cultural diplomacy and showcasing the UAE's commitment to global heritage and artistic exchange."
           }
         ],
         keyContacts: [
           {
-            name: "Hanna Stjärne",
-            title: "CEO of Sveriges Television (SVT)",
-            description: "As the leader of Sweden's public service television broadcaster, Stjärne oversees one of the country's most influential media organizations. She has been instrumental in SVT's digital transformation while maintaining its commitment to impartial news coverage.",
+            name: "The Rodin Museum (Musée Rodin)",
+            title: "",
+            description: "The Rodin Museum (Musée Rodin) is a prominent cultural institution dedicated exclusively to the works of French sculptor Auguste Rodin. Established in 1919 at the Hôtel Biron, the museum operates independently from the French state budget, relying primarily on visitor revenue and limited-edition bronze casts of Rodin’s artworks for financial sustainability. The current director, Amélie Simier (appointed in 2021), oversees all museum operations, curatorial programmes, and strategic international collaborations. Simier’s administration is notably commercially driven, given the museum’s financial independence from the French state. The UAE maintains cultural ties with Musée Rodin primarily through the Louvre Abu Dhabi partnership. This relationship was notably exemplified by the loan of Rodin’s iconic sculpture The Thinker to Abu Dhabi in 2019, highlighting Abu Dhabi’s vision to become a regional and global cultural hub. This aligns with the UAE's broader strategic vision, represented by initiatives such as the Louvre Abu Dhabi and the Cultural District on Saadiyat Island (encompassing existing institutions like Manarat Al Saadiyat and current projects such as the Guggenheim Abu Dhabi, and the Sheikh Zayed Museum), provide potential for further cultural and artistic cooperation with the Rodin Museum. Engagement with Director Amélie Simier would likely focus on reinforcing existing UAE-France cultural collaborations or exploring new avenues for artwork exchanges or educational initiatives.",
             influence: "high",
-            imageUrl: "/lovable-uploads/20fd9b55-7a72-4b20-9222-d786abe8b385.png"
+            imageUrl: "/lovable-uploads/Picture_18.jpg"
           },
           {
-            name: "Peter Wolodarski",
-            title: "Editor-in-Chief of Dagens Nyheter (DN)",
-            description: "Wolodarski leads Sweden's largest morning newspaper and is considered one of the country's most influential media voices. His editorial decisions and columns often shape public discourse on both domestic and international issues.",
+            name: "Cathédrale Notre-Dame de Paris",
+            title: "",
+            description: "Notre-Dame Cathedral, originally constructed in the 12th century, is among France's most revered cultural and religious landmarks. Notre-Dame Cathedral, reopened on 7 December 2024 after extensive restoration following a catastrophic fire in 2019. The cathedral is a national symbol deeply tied to French identity, and holds significant political importance in France, especially following the devastating 2019 fire. French President Emmanuel Macron positioned the cathedral’s restoration as a matter of national pride, pledging completion by late 2024, thereby placing the project under heightened political scrutiny. The high-profile nature of this restoration has amplified political sensitivities, particularly debates over heritage preservation versus modernisation, management transparency, and financial accountability relating to international donations. The UAE expressed strong diplomatic and cultural solidarity with France following the 2019 fire, notably through public statements from UAE President Sheikh Mohamed bin Zayed Al Nahyan. This solidarity is consistent with the UAE’s broader cultural ambitions, demonstrated through initiatives such as Louvre Abu Dhabi and Saadiyat Island’s Cultural District, including Manarat Al Saadiyat and planned venues such as Guggenheim Abu Dhabi. Potential future UAE involvement might centre on diplomatic or ceremonial attendance at Notre-Dame’s continuing schedule of reopening events, opportunities for joint cultural and interfaith dialogue, or collaborations highlighting mutual commitment to global heritage preservation.",
             influence: "high",
-            imageUrl: "/lovable-uploads/0969f621-44c4-4991-a5f3-01dd1bf5488a.png"
-          },
-          {
-            name: "Jan Helin",
-            title: "Program Director at SVT",
-            description: "A veteran media figure, Helin has held several top positions in Swedish media, including as editor-in-chief at Aftonbladet before joining SVT. He has significant influence over programming decisions at Sweden's public broadcaster.",
-            influence: "medium",
-            imageUrl: "/lovable-uploads/f497a46e-61f2-4a52-ba6d-fafbe35bbd48.png"
-          },
-          {
-            name: "Cecilia Uddén",
-            title: "Swedish Radio foreign correspondent",
-            description: "Uddén is one of Sweden's most respected foreign correspondents, with extensive experience reporting from the Middle East. Her analysis and reporting have shaped Swedish public understanding of the region for decades.",
-            influence: "medium",
-            imageUrl: "/lovable-uploads/c57e75a6-af2a-4f60-bb3a-ea45a44f17e2.png"
-          },
+            imageUrl: "/lovable-uploads/Picture_17.png"
+          }
         ]
       }
 
@@ -1089,30 +961,60 @@ export const relationsSections: SectionData[] = [
         ]
       }
     ],
+
+
+    // graphData: {
+    //   nodes: [
+    //     { id: "uae_govt", label: "UAE Government", group: "uae", size: 30 },
+    //     { id: "critics_political", label: "Political Critics", group: "sweden", size: 20 },
+    //     { id: "critics_ngo", label: "Critical NGOs", group: "sweden", size: 20 },
+    //     { id: "critics_media", label: "Media Critics", group: "sweden", size: 18 },
+    //     { id: "critics_academic", label: "Academic Critics", group: "sweden", size: 15 },
+    //     { id: "islamist_orgs", label: "Islamist-Leaning Organizations", group: "neutral", size: 20 },
+    //     { id: "human_rights", label: "Human Rights Organizations", group: "neutral", size: 18 }
+    //   ],
+    //   links: [
+    //     { source: "critics_political", target: "uae_govt", value: 3, dashed: true },
+    //     { source: "critics_ngo", target: "uae_govt", value: 3, dashed: true },
+    //     { source: "critics_media", target: "uae_govt", value: 2, dashed: true },
+    //     { source: "critics_academic", target: "uae_govt", value: 2, dashed: true },
+    //     { source: "islamist_orgs", target: "uae_govt", value: 4, dashed: true },
+    //     { source: "human_rights", target: "uae_govt", value: 3, dashed: true },
+    //     { source: "critics_political", target: "critics_ngo", value: 2 },
+    //     { source: "critics_media", target: "critics_ngo", value: 2 },
+    //     { source: "critics_academic", target: "critics_ngo", value: 1 },
+    //     { source: "islamist_orgs", target: "critics_political", value: 2 },
+    //     { source: "human_rights", target: "critics_ngo", value: 3 }
+    //   ]
+    // }
+
     graphData: {
       nodes: [
         { id: "uae_govt", label: "UAE Government", group: "uae", size: 30 },
-        { id: "critics_political", label: "Political Critics", group: "sweden", size: 20 },
-        { id: "critics_ngo", label: "Critical NGOs", group: "sweden", size: 20 },
-        { id: "critics_media", label: "Media Critics", group: "sweden", size: 18 },
-        { id: "critics_academic", label: "Academic Critics", group: "sweden", size: 15 },
-        { id: "islamist_orgs", label: "Islamist-Leaning Organizations", group: "neutral", size: 20 },
-        { id: "human_rights", label: "Human Rights Organizations", group: "neutral", size: 18 }
+        { id: "melenchon", label: "La France Insoumise (Mélenchon)", group: "france", size: 22 },
+        { id: "greens", label: "Europe Ecology–The Greens", group: "france", size: 20 },
+        { id: "hrw_fidh", label: "Human Rights Watch/FIDH", group: "france", size: 22 },
+        { id: "media_outlets", label: "French Media (Mediapart, Le Monde, Libération)", group: "france", size: 18 },
+        { id: "intelligence_online", label: "Intelligence Online", group: "france", size: 19 },
+        { id: "edge_g42", label: "UAE Tech/Defense Entities (EDGE, G42)", group: "uae", size: 22 },
+        { id: "yemen_involvement", label: "UAE Yemen Involvement", group: "neutral", size: 20 }
       ],
       links: [
-        { source: "critics_political", target: "uae_govt", value: 3, dashed: true },
-        { source: "critics_ngo", target: "uae_govt", value: 3, dashed: true },
-        { source: "critics_media", target: "uae_govt", value: 2, dashed: true },
-        { source: "critics_academic", target: "uae_govt", value: 2, dashed: true },
-        { source: "islamist_orgs", target: "uae_govt", value: 4, dashed: true },
-        { source: "human_rights", target: "uae_govt", value: 3, dashed: true },
-        { source: "critics_political", target: "critics_ngo", value: 2 },
-        { source: "critics_media", target: "critics_ngo", value: 2 },
-        { source: "critics_academic", target: "critics_ngo", value: 1 },
-        { source: "islamist_orgs", target: "critics_political", value: 2 },
-        { source: "human_rights", target: "critics_ngo", value: 3 }
+        { source: "melenchon", target: "uae_govt", value: 3, dashed: true },
+        { source: "greens", target: "uae_govt", value: 3, dashed: true },
+        { source: "hrw_fidh", target: "uae_govt", value: 4, dashed: true },
+        { source: "media_outlets", target: "uae_govt", value: 2, dashed: true },
+        { source: "intelligence_online", target: "edge_g42", value: 4, dashed: true },
+        { source: "yemen_involvement", target: "uae_govt", value: 3 },
+        { source: "hrw_fidh", target: "yemen_involvement", value: 4, dashed: true },
+        { source: "melenchon", target: "hrw_fidh", value: 2 },
+        { source: "greens", target: "hrw_fidh", value: 2 },
+        { source: "media_outlets", target: "hrw_fidh", value: 3 },
+        { source: "media_outlets", target: "intelligence_online", value: 2 },
+        { source: "melenchon", target: "greens", value: 2 }
       ]
     }
+
   },
 
 
@@ -1144,23 +1046,29 @@ export const relationsSections: SectionData[] = [
     relationshipDimensions: [
       {
         name: "Overall Bilateral Strength",
-        value: 75,
-        description: "Positive trajectory with specific areas for improvement"
+        value: 90,
+        description: "Strong strategic partnership with coordinated diplomacy and crisis support"
       },
       {
         name: "Economic Partnership",
-        value: 85,
-        description: "Strong trade relationship with growth potential"
+        value: 90,
+        description: "Robust trade relationship with major investments and strategic energy cooperation"
       },
       {
         name: "Political Alignment",
-        value: 60,
-        description: "General cooperation with some policy differences"
+        value: 75,
+        description: "Strong alignment on core interests with some policy differences managed diplomatically"
       },
       {
+        name: "Defense Cooperation",
+        value: 95,
+        description: "Deep military alliance with permanent French base and major arms agreements"
+      },
+
+      {
         name: "Future Cooperation Potential",
-        value: 90,
-        description: "Significant opportunities for expanded partnership"
+        value: 95,
+        description: "Significant opportunities in AI, space technology, renewables, and cultural exchanges"
       }
     ]
   }

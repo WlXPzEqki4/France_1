@@ -3,7 +3,7 @@
 export interface NetworkNode {
   id: string;
   label: string;
-  group: "uae" | "sweden" | "neutral";
+  group: "uae" | "france" | "neutral";
   size: number;
 }
 

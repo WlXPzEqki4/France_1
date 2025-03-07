@@ -12,7 +12,7 @@ import NetworkDiagram from "./NetworkDiagram";
 import TopicAnalysis from "./TopicAnalysis";
 import ThematicNetworkDiagram from "./ThematicNetworkDiagram";
 import MapConnection from "./MapConnection";
-import PortsConnection from "./PortsConnection";
+// import PortsConnection from "./PortsConnection";
 import InvestmentVisualization from "./InvestmentVisualization";
 
 
@@ -94,7 +94,7 @@ export const SectionContentColumn: React.FC<SectionContentColumnProps> = ({
             <TopicAnalysis />
             <ThematicNetworkDiagram />
             <MapConnection />
-            <PortsConnection />
+            {/* <PortsConnection /> */}
             <InvestmentVisualization />
 
 
